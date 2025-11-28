@@ -11,3 +11,24 @@
   color: white;                        
   text-align: center;
 }
+
+.header-banner nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.header-banner nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.header-banner h1 {
+  font-size: 48px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 给文字加点阴影，提高可读性 */
+}
