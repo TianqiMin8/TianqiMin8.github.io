@@ -1,0 +1,102 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 页面主体样式 */
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+    background-image: url("../Pictures/Background/BookWebbackground.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+    padding: 20px;
+}
+
+
+.center-overlay {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    right: 10px;
+
+    height: 100%;
+
+    /* 半透明背景 */
+    background-color: rgba(135, 206, 235, 0.2); /* 降低透明度，避免遮挡过强 */
+    border-radius: 0; /* 取消圆角，适配全屏高度 */
+    z-index: 10;     /* 确保遮罩在内容下方 */
+
+    /* 可选边框 */
+    border: none; /* 因左右已有2px边距，无需额外边框 */
+}
+
+
+/* 居中标题样式 */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin: 40px 0 60px;
+    font-weight: 600;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20; /* 确保内容在遮罩上方，可交互 */
+}
+
+/* 图片网格布局 */
+.image-grid {
+    display: grid;
+    /* 响应式列数：大屏3列，中屏2列，小屏1列 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* 图片卡片样式 */
+.image-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 鼠标悬停效果 */
+.image-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 图片样式 */
+.image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 图片描述文字 */
+.image-caption {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #555;
+    border-top: 1px solid #eee;
+}
+
+/* 链接样式重置 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
