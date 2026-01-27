@@ -5,7 +5,90 @@
     <title>Moth and Candle</title>
   <link rel="stylesheet" href="../css_files/MaC_style.css">
 </head>
-<body>
 
+<body>
+    <header>
+        <div class="header-banner">
+          <h1>Moth and Candle</h1>
+        </div>
+    </header>
+    <section class="characters">
+      <article class="character">
+        <div class="character-image">
+          <img src="../Pictures/Original_characters/Character_design_moth.png" alt="Moth">
+        </div>
+
+        <div class="character-text">
+          <h2>Moth</h2>
+          <p class="role">The Psychopomp</p>
+          <p class="desc">
+            A silent witness of the unfolding world.
+            Records truths without interference.
+          </p>
+        </div>
+      </article>
+
+      <hr class="character-divider">
+
+      <article class="character">
+        <div class="character-image">
+          <img src="images/char2.png" alt="Candle">
+        </div>
+
+        <div class="character-text">
+          <h2>Candle</h2>
+          <p class="role">The Custodian</p>
+          <p class="desc">
+            The first to question the system and provoke change.
+          </p>
+        </div>
+      </article>
+
+    </section>
+    <section class="storybook">
+      <div class="storybook-view">
+        <img id="pageImage" src="pages/page1.jpg" alt="Story Page">
+      </div>
+
+      <div class="storybook-controls">
+        <button onclick="prevPage()">← Prev</button>
+        <span id="pageIndicator">1 / 5</span>
+        <button onclick="nextPage()">Next →</button>
+      </div>
+
+    </section>
+    <script>
+      const pages = [
+        "pages/page1.jpg",
+        "pages/page2.jpg",
+        "pages/page3.jpg",
+        "pages/page4.jpg",
+        "pages/page5.jpg"
+      ];
+
+      let currentPage = 0;
+
+      const img = document.getElementById("pageImage");
+      const indicator = document.getElementById("pageIndicator");
+
+      function updatePage() {
+        img.src = pages[currentPage];
+        indicator.textContent = `${currentPage + 1} / ${pages.length}`;
+      }
+
+      function nextPage() {
+        if (currentPage < pages.length - 1) {
+          currentPage++;
+          updatePage();
+        }
+      }
+
+      function prevPage() {
+        if (currentPage > 0) {
+          currentPage--;
+          updatePage();
+        }
+      }
+    </script>
 </body>
 </html>
