@@ -1,3 +1,8 @@
+body {
+  background-color: #1c1a22;
+  color: #eae6f2;
+}
+
 .characters {
   max-width: 1200px;
   margin: 0 auto;
@@ -56,13 +61,26 @@
   justify-content: center;
   gap: 2rem;
   align-items: center;
+
 }
 
 .storybook-controls button {
-  background: none;
-  border: 1px solid #000;
-  padding: 0.5rem 1.5rem;
+  background: transparent;
+  color: #f0ecff;
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.6rem 1.6rem;
+  font-size: 0.9rem;
   cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.storybook-controls button:hover {
+  border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.06);
+}
+
+.storybook-controls button:active {
+  transform: translateY(1px);
 }
 
 .header-banner {
