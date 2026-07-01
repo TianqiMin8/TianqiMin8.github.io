@@ -1,3 +1,12 @@
+.project-links{
+    margin-top:15px;
+}
+
+.project-links a{
+    text-decoration:none;
+    font-weight:bold;
+}
+
 .header-banner {
   width: 100%;                        
   height: 40vh;
@@ -101,19 +110,19 @@ footer{
     flex-wrap: wrap;
 }
 
-.card-link {
-    flex: 0 0 calc(33.333% - 13.333px);
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.card-link{
+    display:flex;
+    gap:20px;
+    align-items:center;
+
+    text-decoration:none;
+    color:inherit;
+
+    background:#39424b;
+    border-radius:10px;
+    padding:20px;
+
+    transition:0.3s ease;
 }
 
 .card-link:hover {
@@ -122,18 +131,21 @@ footer{
     /*border-color: #2196F3;*/
 }
 
-.card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    position: relative;
-    top: 2px;
+.card-img{
+    flex:1;
+
+    width:100%;
+    max-width:220px;
+    max-height:260px;
+
+    object-fit:contain;
+    border-radius:8px;
 }
 
 .card-text {
     padding: 16px;
     line-height: 1.6;
+    flex:2;
 }
 
 .card-text h3 {
@@ -142,6 +154,73 @@ footer{
 }
 
 .card-text p {
-    color: #666;
+    color: #d0d0d0;
     font-size: 14px;
+}
+
+.header-banner-roofing{
+    background-image:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("../Pictures/CS/roof_background.jpg");
+}
+
+.pipeline-img{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+.pipeline-img img{
+    width:100%;
+    max-width:900px;
+    height:auto;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+
+.section-flex{
+    display:flex;
+    gap:25px;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.text-block{
+    flex:2;
+}
+
+.side-img-column{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+    flex:0 0 320px;
+}
+
+.side-img-small{
+    width:100%;
+    max-width:300px;
+
+    height:auto;
+
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px){
+    .section-flex{
+        flex-direction:column;
+    }
+
+    .side-img-column{
+        width:100%;
+    }
+
+    .side-img-small{
+        max-width:100%;
+    }
 }

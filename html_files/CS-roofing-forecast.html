@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roofing Forecast Project</title>
+  <link rel="stylesheet" href="../css_files/style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="header-banner header-banner-roofing">
+    <h1>Roofing Permit Demand Forecasting System</h1>
+    <p>Senior Capstone Project</p>
+  </div>
+</header>
+
+<section>
+  <h2>Overview</h2>
+  <p>
+    This project develops an end-to-end data-driven system to forecast roofing permit activity
+    at the ZIP-code level using public permit records combined with socioeconomic, housing,
+    and weather data.
+  </p>
+  <p>
+    The goal is to help roofing companies anticipate regional demand and improve resource allocation
+    through predictive modeling.
+  </p>
+</section>
+
+<section>
+  <h2>Problem Statement</h2>
+  <p>
+    Roofing companies rely heavily on manual research, referrals, and local advertising to identify
+    potential customers. This process is inefficient and reactive.
+  </p>
+  <p>
+    We aim to transform this into a predictive pipeline using time-series forecasting.
+  </p>
+</section>
+
+<section>
+  <h2>Pipline</h2>
+  <div class="pipeline-img">
+    <img src="../Pictures/CS/Roofing-pipeline.png" alt="Pipeline Diagram">
+  </div>
+</section>
+
+<section>
+  <h2>Dataset</h2>
+  <ul>
+    <li>Scraped public roofing permit records</li>
+    <li>Collected socioeconomic datasets</li>
+    <li>Integrated historical weather data</li>
+    <li>Combined housing and regional features</li>
+    <li>Cleaned and merged into unified dataset</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Model</h2>
+  <p>
+    We implemented a Long Short-Term Memory (LSTM) neural network to model temporal patterns
+    in roofing permit activity.
+  </p>
+
+  <ul>
+    <li>Captures seasonal trends and long-term dependencies</li>
+    <li>ZIP-code level forecasting</li>
+    <li>Multi-feature time-series input</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Evaluation</h2>
+
+  <div class="section-flex">
+    <div class="text-block">
+      <p><b>Mean Squared Error (MSE):</b> Used as primary evaluation metric.</p>
+      <p>
+        We evaluated model performance using error analysis, bias inspection,
+        and cross-region validation across multiple ZIP codes.
+      </p>
+      <p>
+        The model performs well in stable regions but shows higher variance
+        in rapidly changing areas.
+      </p>
+    </div>
+
+    <div class="side-img-column">
+      <img src="../Pictures/CS/zip_prediction_1.png" class="side-img-small">
+<!--      <img src="../Pictures/CS/zip_prediction_2.png" class="side-img-small">-->
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Results</h2>
+
+  <div class="section-flex">
+    <div class="text-block">
+      <p>
+        The model successfully captures regional permit trends and enables forecasting of monthly demand
+        across ZIP codes.
+      </p>
+
+      <ul>
+        <li>Contractor workload planning</li>
+        <li>Resource allocation</li>
+        <li>Regional risk analysis</li>
+      </ul>
+    </div>
+    <div class="side-img-column">
+      <img src="../Pictures/CS/Roofing-visualization.png" class="side-img-small">
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <h2>My Contributions</h2>
+
+  <ul>
+    <li>Built data collection and preprocessing pipeline</li>
+    <li>Engineered features from multi-source datasets</li>
+    <li>Implemented LSTM forecasting model in PyTorch</li>
+    <li>Performed evaluation and error analysis</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Tech Stack</h2>
+  <p>
+    Python · PyTorch · LSTM · Pandas · NumPy · Scikit-learn · Matplotlib
+  </p>
+</section>
+
+<footer>
+  <p><a href="../index.html">← Back to Portfolio</a></p>
+</footer>
+
+</body>
+</html>
