@@ -215,12 +215,41 @@ footer{
     .section-flex{
         flex-direction:column;
     }
-
     .side-img-column{
         width:100%;
     }
-
     .side-img-small{
         max-width:100%;
     }
+}
+
+.redistrict-banner{
+    background-image:
+            linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+            url("../Pictures/CS/RI_map.png");
+    background-size:cover;
+    background-position:center;
+}
+
+.resource-grid{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.resource-card{
+    flex:1;
+    min-width:280px;
+    padding:20px;
+    border-radius:10px;
+    background:#39424b;
+    color:white;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.resource-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 4px 15px rgba(0,0,0,.25);
 }

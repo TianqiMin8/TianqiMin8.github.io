@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI for Redistricting</title>
+    <link rel="stylesheet" href="../css_files/style.css">
+</head>
+
+<body>
+
+<div class="header-banner redistrict-banner">
+    <h1>AI for Redistricting</h1>
+    <p>An Analysis of Rhode Island's State Senate Districts</p>
+</div>
+
+<section>
+    <h2>Overview</h2>
+    <p>
+        This project investigates the fairness of Rhode Island's 2022 State Senate
+        districts through computational redistricting analysis. Using
+        <b>GerryChain</b>, we generated over <b>40,000</b> alternative districting
+        plans with the ReCom Markov Chain Monte Carlo (MCMC) algorithm and compared
+        them against the enacted map to evaluate partisan fairness, compactness,
+        and minority representation.
+    </p>
+</section>
+
+<section>
+    <h2>Research Question</h2>
+    <ul>
+        <li>Is the enacted Rhode Island Senate map a partisan outlier?</li>
+        <li>How compact is the current districting plan compared with neutral alternatives?</li>
+        <li>Does the enacted map improve minority representation?</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Methodology</h2>
+    <div class="pipeline-img">
+        <img src="../Pictures/CS/Redistricting-pipline.png"
+             alt="Pipeline">
+    </div>
+    <p>
+        We combined census, election, and district boundary data to construct a
+        dual graph representation of Rhode Island. The ReCom algorithm was then
+        used to generate 40,000 neutral districting plans, allowing statistical
+        comparison between the enacted map and the simulated ensemble.
+    </p>
+</section>
+
+<section>
+    <h2>Key Findings</h2>
+    <div class="section-flex">
+        <div class="text-block">
+            <h3>Partisan Fairness</h3>
+            <p>
+                The enacted 2022 Senate map lies near the center of the simulated
+                ensemble, indicating that its partisan outcome is statistically
+                representative rather than an outlier.
+            </p>
+        </div>
+        <img src="../Pictures/CS/Redistricting_ensemble_distribution.png"
+             class="side-img-small"
+             alt="Partisan Fairness">
+    </div>
+    <div class="section-flex">
+        <div class="text-block">
+            <h3>District-Level Variability</h3>
+            <h4>Political Lean</h4>
+            <p>
+                Across districts, the enacted map exhibits a strong Democratic baseline
+                across the vast majority of districts. The enacted plan aligns closely
+                with the ensemble median in terms of statistical performance, and no
+                districts appear as outliers relative to the simulated distribution,
+                indicating that outcomes remain within high-density regions of the
+                ensemble.
+            </p>
+        </div>
+        <img src="../Pictures/CS/Redistricting_district_variability.png"
+             class="side-img-small"
+             alt="District-Level Variability">
+    </div>
+</section>
+
+<section>
+    <div class="section-flex">
+        <div class="text-block">
+            <h3>Compactness & Minority Representation</h3>
+            <p>
+                Although the enacted map is less compact than the average neutral
+                plan, it preserves more Latino-majority districts than most
+                simulated alternatives, illustrating the trade-off between
+                geometric compactness and community representation.
+            </p>
+        </div>
+        <img src="../Pictures/CS/Redistricting_cutedge_minority.png"
+             class="side-img-small"
+             alt="Compactness">
+    </div>
+</section>
+
+<section>
+    <h2>Implementation Challenges</h2>
+    <div class="section-flex">
+        <div class="text-block">
+            <h3>Population Tolerance</h3>
+            <p>
+                Unlike many U.S. states, Rhode Island permits a relatively large
+                population deviation between districts. We adjusted GerryChain's
+                population tolerance parameter to satisfy the state's legal
+                requirements while ensuring all generated plans remained valid
+                throughout the simulation.
+            </p>
+        </div>
+        <img src="../Pictures/CS/Redistricting_population_tolerance.png"
+             class="side-img-small"
+             alt="Population Tolerance">
+    </div>
+
+    <div class="section-flex">
+        <div class="text-block">
+            <h3>Island Connectivity</h3>
+            <p>
+                Several Rhode Island precincts are located on islands and are not
+                physically connected to the mainland, resulting in disconnected
+                graph components. To enable ReCom operations, we manually added
+                adjacency edges between these precincts and their corresponding
+                mainland districts while preserving the intended administrative
+                relationships.
+            </p>
+        </div>
+        <img src="../Pictures/CS/Redistricting_island_connectivity.png"
+             class="side-img-small"
+             alt="Island Connectivity">
+    </div>
+</section>
+
+<section>
+    <h2>Conclusion</h2>
+    <p>
+        Overall, the analysis suggests that Rhode Island’s 2022 State Senate
+        map is not a partisan outlier, as its outcomes closely align with
+        the distribution of simulated redistricting plans. However, the map
+        exhibits lower compactness compared to neutral ensembles, reflecting
+        a trade-off between geometric efficiency and representation goals.
+        Additionally, it preserves a relatively higher number of Latino-majority
+        districts, indicating improved minority representation relative to most
+        algorithmically generated alternatives.
+    </p>
+</section>
+
+<section>
+    <h2>My Contributions</h2>
+    <ul>
+        <li>Processed and cleaned geospatial datasets.</li>
+        <li>Constructed dual graphs for redistricting analysis.</li>
+        <li>Implemented GerryChain ensemble simulations.</li>
+        <li>Generated statistical visualizations and analysis.</li>
+        <li>Co-authored the final research paper.</li>
+    </ul>
+
+</section>
+
+<section>
+    <h2>Resources</h2>
+    <div class="resource-grid">
+        <a class="resource-card"
+           href="../pdf/CS464FinalProject.pdf"
+           target="_blank">
+            <h3>Research Paper</h3>
+            <p>
+                Read the complete analysis, methodology, and experimental results.
+            </p>
+        </a>
+        <a class="resource-card"
+           href="https://github.com/TianqiMin8/CS464FinalProject"
+           target="_blank">
+            <h3>GitHub Repository</h3>
+            <p>
+                Explore the implementation, notebooks, and source code.
+            </p>
+        </a>
+    </div>
+</section>
+
+</body>
+
+<footer>
+  <p><a href="../index.html">← Back to Portfolio</a></p>
+</footer>
+
+</html>
