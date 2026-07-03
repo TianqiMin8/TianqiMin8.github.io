@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FWTest Engineer Intern - Coherent</title>
+  <link rel="stylesheet" href="../css_files/style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="header-banner header-banner-coherent">
+    <h1>FWTest Engineer Intern</h1>
+    <p>Coherent · Shanghai, China · Dec 2025 - Jan 2026</p>
+  </div>
+</header>
+
+
+<section>
+  <h2>Overview</h2>
+  <p>
+    Worked as a Firmware Test Engineer Intern at Coherent, developing an automated
+    testing system for an Optical Channel System (OCS). The project focused on improving
+    firmware validation efficiency, test reliability, and system traceability.
+  </p>
+</section>
+
+
+<section>
+  <h2>Problem Statement</h2>
+  <p>
+    Manual firmware testing was slow, inconsistent, and lacked structured logging,
+    making it difficult to reproduce issues or analyze system behavior at scale.
+  </p>
+  <p>
+    The goal was to build an automated testing pipeline capable of large-scale execution,
+    reliable communication, and post-test data analysis.
+  </p>
+</section>
+
+
+<section>
+  <h2>System Architecture</h2>
+  <div class="pipeline-img">
+    <img src="../Pictures/CS/Coherent-testing-pipeline.png" alt="Testing Pipeline">
+  </div>
+</section>
+
+
+<section>
+  <h2>Data Collection & Testing System</h2>
+
+  <ul>
+    <li>Developed a Python-based automated firmware testing tool for OCS devices</li>
+    <li>Implemented serial communication using <b>pySerial</b> for command transmission and response handling</li>
+    <li>Executed up to <b>120,000 commands per stress test run</b> to evaluate system stability</li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Logging & Analysis</h2>
+
+  <div class="section-flex">
+    <div class="text-block">
+      <p>
+        Designed a structured logging system to record all test inputs, device responses,
+        timestamps, and execution status for full traceability.
+      </p>
+
+      <p>
+        Built analysis pipelines using <b>pandas</b> to compute response time statistics
+        (mean, min, max) and execution success rates across test runs.
+      </p>
+    </div>
+
+<!--    <div class="side-img-column">-->
+<!--      <img src="../Pictures/CS/coherent_logging.png" class="side-img-small">-->
+<!--    </div>-->
+  </div>
+</section>
+
+
+<section>
+  <h2>Results</h2>
+
+  <ul>
+    <li>Improved firmware testing automation and reproducibility</li>
+    <li>Enabled large-scale stress testing for system reliability evaluation</li>
+    <li>Identified critical firmware issues:
+      <ul>
+        <li>Unprotected reboot behavior</li>
+        <li>Missing responses after command transmission</li>
+        <li>Out-of-range response values</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>My Contributions</h2>
+
+  <ul>
+    <li>Built automated firmware testing framework in Python</li>
+    <li>Implemented serial communication workflow using pySerial</li>
+    <li>Designed structured logging and traceability system</li>
+    <li>Performed large-scale stress testing and data analysis</li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>Tech Stack</h2>
+  <p>
+    Python · pySerial · Pandas · Firmware Testing · Serial Communication · Data Logging
+  </p>
+</section>
+
+
+<footer>
+  <p><a href="../index.html">← Back to Portfolio</a></p>
+</footer>
+
+</body>
+</html>

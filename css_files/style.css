@@ -43,7 +43,7 @@
 .header-banner h1 {
   font-size: 48px;
   margin: 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 给文字加点阴影，提高可读性 */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 body{
@@ -161,7 +161,7 @@ footer{
 .header-banner-roofing{
     background-image:
         linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("../Pictures/CS/roof_background.jpg");
+        url("../Pictures/CS/Roof-banner.jpg");
 }
 
 .pipeline-img{
@@ -226,7 +226,7 @@ footer{
 .redistrict-banner{
     background-image:
             linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-            url("../Pictures/CS/RI_map.png");
+            url("../Pictures/CS/Redistricting-banner.jpg");
     background-size:cover;
     background-position:center;
 }
@@ -252,4 +252,12 @@ footer{
 .resource-card:hover{
     transform:translateY(-4px);
     box-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+.header-banner-coherent{
+    background-image:
+            linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+            url("../Pictures/CS/FW-banner.jpg");
+    background-size:cover;
+    background-position:center;
 }
